@@ -1,0 +1,83 @@
+:root{
+  // ### Primary
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  // ### Neutral
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+//  font-family: 'Poppins', sans-serif;    
+//  font-weigth: 200 400 600
+
+.container1{
+  text-align: center;
+  width: 44%;
+  margin: auto;
+}
+.container2{
+  // position: absolute;
+  display: grid;
+  border: 1px solid;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  grid-column: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: '.  tb . '
+                       'su tb cl'
+                       'su ka cl'
+                       '.  ka . ';
+
+
+
+}
+.card{
+  // position: absolute;
+  border: 1px solid;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  margin: auto;
+  text-align: left;
+  padding-left: 20px;
+  
+  // margin: auto;
+}
+ .card1{
+  //  grid-area: 1 / 2 / span 1 / span 1;
+  grid-area: tb;
+ }
+ .card2{
+  //  grid-area: 2 / 1 / span 1 / span 1;
+  //  margin-top: -90px;
+  grid-area: su;
+ }
+.card3{
+  // grid-area: 2 / 3 / span 1 / span 1;
+  // margin-top: -90px;
+  grid-area: cl;
+}
+.card4{
+  // grid-area: 4 / 2 / span 1 / span 1;
+  // margin-top: -58px;
+  grid-area: ka;
+}
+h1{
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font: 400;
+}
+p{
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}

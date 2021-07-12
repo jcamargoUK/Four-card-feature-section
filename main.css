@@ -1,0 +1,83 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+.container1 {
+  text-align: center;
+  width: 44%;
+  margin: auto;
+}
+
+.container2 {
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  grid-column: 1fr 1fr 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: '.  tb . ' 'su tb cl' 'su ka cl' '.  ka . ';
+}
+
+.card {
+  border: 1px solid;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  margin: auto;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.card1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: tb;
+}
+
+.card2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: su;
+}
+
+.card3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: cl;
+}
+
+.card4 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: ka;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font: 400;
+}
+
+p {
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+/*# sourceMappingURL=main.css.map */
