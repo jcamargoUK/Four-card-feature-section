@@ -1,18 +1,27 @@
-:root{
-  // ### Primary
-  --Red: hsl(0, 78%, 62%);
-  --Cyan: hsl(180, 62%, 55%);
-  --Orange: hsl(34, 97%, 64%);
-  --Blue: hsl(212, 86%, 64%);
 
-  // ### Neutral
+// ///////////////Variables//////////////////////
 
-  --Very-Dark-Blue: hsl(234, 12%, 34%);
-  --Grayish-Blue: hsl(229, 6%, 66%);
-  --Very-Light-Gray: hsl(0, 0%, 98%);
+//   // ### Primary
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+//   ////////////////### Neutral/////////////////////
+
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+
+//     //////////mixin//////////////////////////////////
+
+@mixin cardBorder($bColor: $Red) {
+  border-top: 3px solid $bColor;
 }
+
 body{
-  background-color: var(--Very-Light-Gray);
+  background-color: $Very-Light-Gray;
 }
 .container1{
   text-align: center;
@@ -20,7 +29,7 @@ body{
   margin: auto;
 }
 #head1{
-  color: var(--Grayish-Blue); 
+  color: $Grayish-Blue; 
   margin-bottom: 0;
   line-height: 0;
   margin-top: 20px;
@@ -28,7 +37,6 @@ body{
 .container2{
   // position: absolute;
   display: grid;
-  border: 1px solid;
   width: 80%;
   height: 500px;
   margin: auto;
@@ -43,7 +51,6 @@ body{
 
 }
 .card{
-  // position: absolute;
   width: 250px;
   height: 200px;
   text-align: center;
@@ -52,31 +59,23 @@ body{
   padding-left: 20px;
   border: none;
   border-radius: 4px;
-  box-shadow: 0px 6px 13px 2px var(--Grayish-Blue);
-  // margin: auto;
+  box-shadow: 0px 6px 13px 2px $Grayish-Blue;
 }
  .card1{
-  //  grid-area: 1 / 2 / span 1 / span 1;
   grid-area: tb;
-  border-top: 3px solid var(--Red);
+  @include cardBorder;
  }
- .card2{
-  //  grid-area: 2 / 1 / span 1 / span 1;
-  //  margin-top: -90px;
+ .card2{  
   grid-area: su;
-  border-top: 3px solid var(--Cyan);
+  @include cardBorder($bColor: $Cyan);
  }
 .card3{
-  // grid-area: 2 / 3 / span 1 / span 1;
-  // margin-top: -90px;
   grid-area: cl;
-  border-top: 3px solid var(--Orange);
+  @include cardBorder($bColor: $Blue);
 }
 .card4{
-  // grid-area: 4 / 2 / span 1 / span 1;
-  // margin-top: -58px;
   grid-area: ka;
-  border-top: 3px solid var(--Red);
+  @include cardBorder($bColor: $Orange);
 }
 h1{
   font-family: 'Poppins', sans-serif;
@@ -86,13 +85,13 @@ h2{
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font: 400;
-  color: var(--Very-Dark-Blue);
+  color: $Very-Dark-Blue;
 }
 p{
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  color: var(--Very-Dark-Blue);
+  color: $Very-Dark-Blue;
 }
 .image{
   position: absolute;
@@ -103,7 +102,6 @@ p{
   margin-top: 20px;
   margin-left: 160px;
 }
-
 .image1{
   background-image: url(images/icon-team-builder.svg);  
 }
