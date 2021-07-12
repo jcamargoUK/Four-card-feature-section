@@ -116,4 +116,22 @@ p {
 .image4 {
   background-image: url(images/icon-karma.svg);
 }
+
+@media screen and (max-width: 375px) {
+  .container1 {
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .container1 #head1, .container1 #head2 {
+    line-height: 1;
+    font-size: 18px;
+  }
+  .container2 {
+        grid-template-areas: 'su' 'tb' 'ka' 'cl';
+    grid-gap: 20px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
