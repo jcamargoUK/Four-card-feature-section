@@ -14,11 +14,16 @@
 
 //  font-family: 'Poppins', sans-serif;    
 //  font-weigth: 200 400 600
-
 .container1{
   text-align: center;
   width: 44%;
   margin: auto;
+}
+#head1{
+  color: var(--Grayish-Blue); 
+  margin-bottom: 0;
+  line-height: 0;
+  margin-top: 20px;
 }
 .container2{
   // position: absolute;
@@ -46,12 +51,14 @@
   margin: auto;
   text-align: left;
   padding-left: 20px;
-  
+  border: none;
+
   // margin: auto;
 }
  .card1{
   //  grid-area: 1 / 2 / span 1 / span 1;
   grid-area: tb;
+  border-top: 3px solid var(--Red);
  }
  .card2{
   //  grid-area: 2 / 1 / span 1 / span 1;
@@ -70,6 +77,7 @@
 }
 h1{
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 h2{
   font-size: 15px;
@@ -80,4 +88,26 @@ p{
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
+}
+.image{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+.image1{
+  background-image: url(images/icon-team-builder.svg);  
+}
+.image2{
+  background-image: url(images/icon-supervisor.svg);
+}
+.image3{
+  background-image: url(images/icon-calculator.svg);
+}
+.image4{
+  background-image: url(images/icon-karma.svg);
 }
